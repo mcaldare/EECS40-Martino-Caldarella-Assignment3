@@ -6,7 +6,8 @@
     android:layout_height="match_parent"
     android:orientation="horizontal"
     android:padding="20dp"
-    android:background="@color/colorBackground">
+    android:background="@drawable/background2"
+    >
 
 
 
@@ -14,23 +15,29 @@
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:gravity="bottom|center"
-        android:orientation="vertical">
+        android:orientation="vertical"
+        >
 
         <TextView
             android:layout_width="match_parent"
-            android:layout_height="40sp"
+            android:layout_height="50sp"
             android:layout_marginBottom="10dp"
             android:id="@+id/display"
-            android:textColor="@color/colorFour"
-            android:hint="goal"/>
+
+            android:textSize="35sp"
+            android:textColor="@color/colorOne"
+            android:textAlignment="center"
+            android:fontFamily="cursive"/>
 
         <TextView
             android:layout_width="match_parent"
-            android:layout_height="40sp"
+            android:layout_height="50sp"
             android:layout_marginBottom="30dp"
             android:id="@+id/score"
-            android:textColor="@color/colorFive"
-            android:hint="points"/>
+
+            android:textSize="35sp"
+            android:textColor="@color/colorThree"
+            android:fontFamily="cursive"/>
 
 
 
@@ -44,430 +51,657 @@
                 android:layout_height="match_parent"
                 >
 
-                <ImageButton
-                    android:id="@+id/imageButton11"
-                    android:layout_width="50sp"
-                    android:layout_height="50sp"
-                    android:background="@color/colorFive"
+                <ImageView
+                    android:background="#00FF0000"
+                    android:id="@+id/cell_11"
+                    android:layout_width="37sp"
+                    android:layout_height="37sp"
                     android:scaleType="fitXY"
-                    app:srcCompat="@drawable/panda"
-
                     />
 
-                <ImageButton
-                    android:id="@+id/imageButton12"
-                    android:layout_width="50sp"
-                    android:layout_height="50sp"
-                    android:background="@color/colorOne"
+                <ImageView
+                    android:id="@+id/cell_12"
+                    android:layout_width="37sp"
+                    android:layout_height="37sp"
+                    android:background="#00FF0000"
                     android:scaleType="fitXY"
-                    app:srcCompat="@drawable/panda" />
+                    />
+                <ImageView
+                    android:background="#00FF0000"
+                    android:id="@+id/cell_13"
+                    android:layout_width="37sp"
+                    android:layout_height="37sp"
+                    android:scaleType="fitXY"
+                    />
 
-                <ImageButton
-                    android:id="@+id/imageButton13"
-                    android:layout_width="50sp"
-                    android:layout_height="50sp"
-                    android:background="@color/colorSix"
+                <ImageView
+                    android:id="@+id/cell_14"
+                    android:layout_width="37sp"
+                    android:layout_height="37sp"
+                    android:background="#00FF0000"
                     android:scaleType="fitXY"
-                    app:srcCompat="@drawable/panda" />
+                    />
+                <ImageView
+                    android:background="#00FF0000"
+                    android:id="@+id/cell_15"
+                    android:layout_width="37sp"
+                    android:layout_height="37sp"
+                    android:scaleType="fitXY"
+                    />
 
-                <ImageButton
-                    android:id="@+id/imageButton14"
-                    android:layout_width="50sp"
-                    android:layout_height="50sp"
-                    android:background="@color/colorSix"
+                <ImageView
+                    android:id="@+id/cell_16"
+                    android:layout_width="37sp"
+                    android:layout_height="37sp"
+                    android:background="#00FF0000"
                     android:scaleType="fitXY"
-                    app:srcCompat="@drawable/panda" />
+                    />
+                <ImageView
+                    android:background="#00FF0000"
+                    android:id="@+id/cell_17"
+                    android:layout_width="37sp"
+                    android:layout_height="37sp"
+                    android:scaleType="fitXY"
+                    />
 
-                <ImageButton
-                    android:id="@+id/imageButton15"
-                    android:layout_width="50sp"
-                    android:layout_height="50sp"
-                    android:background="@color/colorSix"
+                <ImageView
+                    android:id="@+id/cell_18"
+                    android:layout_width="37sp"
+                    android:layout_height="37sp"
+                    android:background="#00FF0000"
                     android:scaleType="fitXY"
-                    app:srcCompat="@drawable/panda" />
-
-                <ImageButton
-                    android:id="@+id/imageButton16"
-                    android:layout_width="50sp"
-                    android:layout_height="50sp"
-                    android:background="@color/colorThree"
+                    />
+                <ImageView
+                    android:id="@+id/cell_19"
+                    android:layout_width="37sp"
+                    android:layout_height="37sp"
+                    android:background="#00FF0000"
                     android:scaleType="fitXY"
-                    app:srcCompat="@drawable/panda" />
-
-                <ImageButton
-                    android:id="@+id/imageButton17"
-                    android:layout_width="50sp"
-                    android:layout_height="50sp"
-                    android:background="@color/colorTwo"
-                    android:scaleType="fitXY"
-                    app:srcCompat="@drawable/panda" />
+                    />
             </TableRow>
 
             <TableRow
                 android:layout_width="match_parent"
                 android:layout_height="match_parent">
 
-                <ImageButton
-                    android:id="@+id/imageButton21"
-                    android:layout_width="50sp"
-                    android:layout_height="50sp"
-                    android:background="@color/colorFive"
+                <ImageView
+                    android:background="#00FF0000"
+                    android:id="@+id/cell_21"
+                    android:layout_width="37sp"
+                    android:layout_height="37sp"
                     android:scaleType="fitXY"
-                    app:srcCompat="@drawable/panda" />
+                    />
 
-                <ImageButton
-                    android:id="@+id/imageButton22"
-                    android:layout_width="50sp"
-                    android:layout_height="50sp"
-                    android:background="@color/colorFive"
+                <ImageView
+                    android:id="@+id/cell_22"
+                    android:layout_width="37sp"
+                    android:layout_height="37sp"
+                    android:background="#00FF0000"
                     android:scaleType="fitXY"
-                    app:srcCompat="@drawable/panda" />
+                    />
+                <ImageView
+                    android:background="#00FF0000"
+                    android:id="@+id/cell_23"
+                    android:layout_width="37sp"
+                    android:layout_height="37sp"
+                    android:scaleType="fitXY"
+                    />
 
-                <ImageButton
-                    android:id="@+id/imageButton23"
-                    android:layout_width="50sp"
-                    android:layout_height="50sp"
-                    android:background="@color/colorFour"
+                <ImageView
+                    android:id="@+id/cell_24"
+                    android:layout_width="37sp"
+                    android:layout_height="37sp"
+                    android:background="#00FF0000"
                     android:scaleType="fitXY"
-                    app:srcCompat="@drawable/panda" />
+                    />
+                <ImageView
+                    android:background="#00FF0000"
+                    android:id="@+id/cell_25"
+                    android:layout_width="37sp"
+                    android:layout_height="37sp"
+                    android:scaleType="fitXY"
+                    />
 
-                <ImageButton
-                    android:id="@+id/imageButton24"
-                    android:layout_width="50sp"
-                    android:layout_height="50sp"
-                    android:background="@color/colorSix"
+                <ImageView
+                    android:id="@+id/cell_26"
+                    android:layout_width="37sp"
+                    android:layout_height="37sp"
+                    android:background="#00FF0000"
                     android:scaleType="fitXY"
-                    app:srcCompat="@drawable/panda" />
+                    />
+                <ImageView
+                    android:background="#00FF0000"
+                    android:id="@+id/cell_27"
+                    android:layout_width="37sp"
+                    android:layout_height="37sp"
+                    android:scaleType="fitXY"
+                    />
 
-                <ImageButton
-                    android:id="@+id/imageButton25"
-                    android:layout_width="50sp"
-                    android:layout_height="50sp"
-                    android:background="@color/colorSix"
+                <ImageView
+                    android:id="@+id/cell_28"
+                    android:layout_width="37sp"
+                    android:layout_height="37sp"
+                    android:background="#00FF0000"
                     android:scaleType="fitXY"
-                    app:srcCompat="@drawable/panda" />
-
-                <ImageButton
-                    android:id="@+id/imageButton26"
-                    android:layout_width="50sp"
-                    android:layout_height="50sp"
-                    android:background="@color/colorFive"
+                    />
+                <ImageView
+                    android:id="@+id/cell_29"
+                    android:layout_width="37sp"
+                    android:layout_height="37sp"
+                    android:background="#00FF0000"
                     android:scaleType="fitXY"
-                    app:srcCompat="@drawable/panda" />
-
-                <ImageButton
-                    android:id="@+id/imageButton27"
-                    android:layout_width="50sp"
-                    android:layout_height="50sp"
-                    android:background="@color/colorFour"
-                    android:scaleType="fitXY"
-                    app:srcCompat="@drawable/panda" />
+                    />
             </TableRow>
 
             <TableRow
                 android:layout_width="match_parent"
                 android:layout_height="match_parent">
 
-                <ImageButton
-                    android:id="@+id/imageButton31"
-                    android:layout_width="50sp"
-                    android:layout_height="50sp"
-                    android:background="@color/colorThree"
+                <ImageView
+                    android:background="#00FF0000"
+                    android:id="@+id/cell_31"
+                    android:layout_width="37sp"
+                    android:layout_height="37sp"
                     android:scaleType="fitXY"
-                    app:srcCompat="@drawable/panda" />
+                    />
 
-                <ImageButton
-                    android:id="@+id/imageButton32"
-                    android:layout_width="50sp"
-                    android:layout_height="50sp"
-                    android:background="@color/colorOne"
+                <ImageView
+                    android:id="@+id/cell_32"
+                    android:layout_width="37sp"
+                    android:layout_height="37sp"
+                    android:background="#00FF0000"
                     android:scaleType="fitXY"
-                    app:srcCompat="@drawable/panda" />
+                    />
+                <ImageView
+                    android:background="#00FF0000"
+                    android:id="@+id/cell_33"
+                    android:layout_width="37sp"
+                    android:layout_height="37sp"
+                    android:scaleType="fitXY"
+                    />
 
-                <ImageButton
-                    android:id="@+id/imageButton33"
-                    android:layout_width="50sp"
-                    android:layout_height="50sp"
-                    android:background="@color/colorThree"
+                <ImageView
+                    android:id="@+id/cell_34"
+                    android:layout_width="37sp"
+                    android:layout_height="37sp"
+                    android:background="#00FF0000"
                     android:scaleType="fitXY"
-                    app:srcCompat="@drawable/panda" />
+                    />
+                <ImageView
+                    android:background="#00FF0000"
+                    android:id="@+id/cell_35"
+                    android:layout_width="37sp"
+                    android:layout_height="37sp"
+                    android:scaleType="fitXY"
+                    />
 
-                <ImageButton
-                    android:id="@+id/imageButton34"
-                    android:layout_width="50sp"
-                    android:layout_height="50sp"
-                    android:background="@color/colorFive"
+                <ImageView
+                    android:id="@+id/cell_36"
+                    android:layout_width="37sp"
+                    android:layout_height="37sp"
+                    android:background="#00FF0000"
                     android:scaleType="fitXY"
-                    app:srcCompat="@drawable/panda" />
+                    />
+                <ImageView
+                    android:background="#00FF0000"
+                    android:id="@+id/cell_37"
+                    android:layout_width="37sp"
+                    android:layout_height="37sp"
+                    android:scaleType="fitXY"
+                    />
 
-                <ImageButton
-                    android:id="@+id/imageButton35"
-                    android:layout_width="50sp"
-                    android:layout_height="50sp"
-                    android:background="@color/colorTwo"
+                <ImageView
+                    android:id="@+id/cell_38"
+                    android:layout_width="37sp"
+                    android:layout_height="37sp"
+                    android:background="#00FF0000"
                     android:scaleType="fitXY"
-                    app:srcCompat="@drawable/panda" />
-
-                <ImageButton
-                    android:id="@+id/imageButton36"
-                    android:layout_width="50sp"
-                    android:layout_height="50sp"
-                    android:background="@color/colorThree"
+                    />
+                <ImageView
+                    android:id="@+id/cell_39"
+                    android:layout_width="37sp"
+                    android:layout_height="37sp"
+                    android:background="#00FF0000"
                     android:scaleType="fitXY"
-                    app:srcCompat="@drawable/panda" />
-
-                <ImageButton
-                    android:id="@+id/imageButton37"
-                    android:layout_width="50sp"
-                    android:layout_height="50sp"
-                    android:background="@color/colorTwo"
-                    android:scaleType="fitXY"
-                    app:srcCompat="@drawable/panda" />
+                    />
             </TableRow>
 
             <TableRow
                 android:layout_width="match_parent"
                 android:layout_height="match_parent">
 
-                <ImageButton
-                    android:id="@+id/imageButton41"
-                    android:layout_width="50sp"
-                    android:layout_height="50sp"
-                    android:background="@color/colorTwo"
+                <ImageView
+                    android:background="#00FF0000"
+                    android:id="@+id/cell_41"
+                    android:layout_width="37sp"
+                    android:layout_height="37sp"
                     android:scaleType="fitXY"
-                    app:srcCompat="@drawable/panda" />
+                    />
 
-                <ImageButton
-                    android:id="@+id/imageButton42"
-                    android:layout_width="50sp"
-                    android:layout_height="50sp"
-                    android:background="@color/colorTwo"
+                <ImageView
+                    android:id="@+id/cell_42"
+                    android:layout_width="37sp"
+                    android:layout_height="37sp"
+                    android:background="#00FF0000"
                     android:scaleType="fitXY"
-                    app:srcCompat="@drawable/panda" />
-
-                <ImageButton
-                    android:id="@+id/imageButton43"
-                    android:layout_width="50sp"
-                    android:layout_height="50sp"
-                    android:background="@color/colorSix"
+                    />
+                <ImageView
+                    android:background="#00FF0000"
+                    android:id="@+id/cell_43"
+                    android:layout_width="37sp"
+                    android:layout_height="37sp"
                     android:scaleType="fitXY"
-                    app:srcCompat="@drawable/panda" />
+                    />
 
-                <ImageButton
-                    android:id="@+id/imageButton44"
-                    android:layout_width="50sp"
-                    android:layout_height="50sp"
-                    android:background="@color/colorFour"
+                <ImageView
+                    android:id="@+id/cell_44"
+                    android:layout_width="37sp"
+                    android:layout_height="37sp"
+                    android:background="#00FF0000"
                     android:scaleType="fitXY"
-                    app:srcCompat="@drawable/panda" />
-
-                <ImageButton
-                    android:id="@+id/imageButton45"
-                    android:layout_width="50sp"
-                    android:layout_height="50sp"
-                    android:background="@color/colorSix"
+                    />
+                <ImageView
+                    android:background="#00FF0000"
+                    android:id="@+id/cell_45"
+                    android:layout_width="37sp"
+                    android:layout_height="37sp"
                     android:scaleType="fitXY"
-                    app:srcCompat="@drawable/panda" />
+                    />
 
-                <ImageButton
-                    android:id="@+id/imageButton46"
-                    android:layout_width="50sp"
-                    android:layout_height="50sp"
-                    android:background="@color/colorSix"
+                <ImageView
+                    android:id="@+id/cell_46"
+                    android:layout_width="37sp"
+                    android:layout_height="37sp"
+                    android:background="#00FF0000"
                     android:scaleType="fitXY"
-                    app:srcCompat="@drawable/panda" />
-
-                <ImageButton
-                    android:id="@+id/imageButton47"
-                    android:layout_width="50sp"
-                    android:layout_height="50sp"
-                    android:background="@color/colorFive"
+                    />
+                <ImageView
+                    android:background="#00FF0000"
+                    android:id="@+id/cell_47"
+                    android:layout_width="37sp"
+                    android:layout_height="37sp"
                     android:scaleType="fitXY"
-                    app:srcCompat="@drawable/panda" />
+                    />
 
+                <ImageView
+                    android:id="@+id/cell_48"
+                    android:layout_width="37sp"
+                    android:layout_height="37sp"
+                    android:background="#00FF0000"
+                    android:scaleType="fitXY"
+                    />
+                <ImageView
+                    android:id="@+id/cell_49"
+                    android:layout_width="37sp"
+                    android:layout_height="37sp"
+                    android:background="#00FF0000"
+                    android:scaleType="fitXY"
+                    />
             </TableRow>
 
             <TableRow
                 android:layout_width="match_parent"
                 android:layout_height="match_parent">
 
-                <ImageButton
-                    android:id="@+id/imageButton51"
-                    android:layout_width="50sp"
-                    android:layout_height="50sp"
-                    android:background="@color/colorSix"
+                <ImageView
+                    android:background="#00FF0000"
+                    android:id="@+id/cell_51"
+                    android:layout_width="37sp"
+                    android:layout_height="37sp"
                     android:scaleType="fitXY"
-                    app:srcCompat="@drawable/panda" />
+                    />
 
-                <ImageButton
-                    android:id="@+id/imageButton52"
-                    android:layout_width="50sp"
-                    android:layout_height="50sp"
-                    android:background="@color/colorFour"
+                <ImageView
+                    android:id="@+id/cell_52"
+                    android:layout_width="37sp"
+                    android:layout_height="37sp"
+                    android:background="#00FF0000"
                     android:scaleType="fitXY"
-                    app:srcCompat="@drawable/panda" />
+                    />
+                <ImageView
+                    android:background="#00FF0000"
+                    android:id="@+id/cell_53"
+                    android:layout_width="37sp"
+                    android:layout_height="37sp"
+                    android:scaleType="fitXY"
+                    />
 
-                <ImageButton
-                    android:id="@+id/imageButton53"
-                    android:layout_width="50sp"
-                    android:layout_height="50sp"
-                    android:background="@color/colorSix"
+                <ImageView
+                    android:id="@+id/cell_54"
+                    android:layout_width="37sp"
+                    android:layout_height="37sp"
+                    android:background="#00FF0000"
                     android:scaleType="fitXY"
-                    app:srcCompat="@drawable/panda" />
+                    />
+                <ImageView
+                    android:background="#00FF0000"
+                    android:id="@+id/cell_55"
+                    android:layout_width="37sp"
+                    android:layout_height="37sp"
+                    android:scaleType="fitXY"
+                    />
 
-                <ImageButton
-                    android:id="@+id/imageButton54"
-                    android:layout_width="50sp"
-                    android:layout_height="50sp"
-                    android:background="@color/colorThree"
+                <ImageView
+                    android:id="@+id/cell_56"
+                    android:layout_width="37sp"
+                    android:layout_height="37sp"
+                    android:background="#00FF0000"
                     android:scaleType="fitXY"
-                    app:srcCompat="@drawable/panda" />
+                    />
+                <ImageView
+                    android:background="#00FF0000"
+                    android:id="@+id/cell_57"
+                    android:layout_width="37sp"
+                    android:layout_height="37sp"
+                    android:scaleType="fitXY"
+                    />
 
-                <ImageButton
-                    android:id="@+id/imageButton55"
-                    android:layout_width="50sp"
-                    android:layout_height="50sp"
-                    android:background="@color/colorTwo"
+                <ImageView
+                    android:id="@+id/cell_58"
+                    android:layout_width="37sp"
+                    android:layout_height="37sp"
+                    android:background="#00FF0000"
                     android:scaleType="fitXY"
-                    app:srcCompat="@drawable/panda" />
-
-                <ImageButton
-                    android:id="@+id/imageButton56"
-                    android:layout_width="50sp"
-                    android:layout_height="50sp"
-                    android:background="@color/colorFour"
+                    />
+                <ImageView
+                    android:id="@+id/cell_59"
+                    android:layout_width="37sp"
+                    android:layout_height="37sp"
+                    android:background="#00FF0000"
                     android:scaleType="fitXY"
-                    app:srcCompat="@drawable/panda" />
-
-                <ImageButton
-                    android:id="@+id/imageButton57"
-                    android:layout_width="50sp"
-                    android:layout_height="50sp"
-                    android:background="@color/colorThree"
-                    android:scaleType="fitXY"
-                    app:srcCompat="@drawable/panda" />
+                    />
             </TableRow>
 
             <TableRow
                 android:layout_width="match_parent"
                 android:layout_height="match_parent">
 
-                <ImageButton
-                    android:id="@+id/imageButton61"
-                    android:layout_width="50sp"
-                    android:layout_height="50sp"
-                    android:background="@color/colorTwo"
+                <ImageView
+                    android:background="#00FF0000"
+                    android:id="@+id/cell_61"
+                    android:layout_width="37sp"
+                    android:layout_height="37sp"
                     android:scaleType="fitXY"
-                    app:srcCompat="@drawable/panda" />
+                    />
 
-                <ImageButton
-                    android:id="@+id/imageButton62"
-                    android:layout_width="50sp"
-                    android:layout_height="50sp"
-                    android:background="@color/colorFour"
+                <ImageView
+                    android:id="@+id/cell_62"
+                    android:layout_width="37sp"
+                    android:layout_height="37sp"
+                    android:background="#00FF0000"
                     android:scaleType="fitXY"
-                    app:srcCompat="@drawable/panda" />
+                    />
+                <ImageView
+                    android:background="#00FF0000"
+                    android:id="@+id/cell_63"
+                    android:layout_width="37sp"
+                    android:layout_height="37sp"
+                    android:scaleType="fitXY"
+                    />
 
-                <ImageButton
-                    android:id="@+id/imageButton63"
-                    android:layout_width="50sp"
-                    android:layout_height="50sp"
-                    android:background="@color/colorFour"
+                <ImageView
+                    android:id="@+id/cell_64"
+                    android:layout_width="37sp"
+                    android:layout_height="37sp"
+                    android:background="#00FF0000"
                     android:scaleType="fitXY"
-                    app:srcCompat="@drawable/panda" />
+                    />
+                <ImageView
+                    android:background="#00FF0000"
+                    android:id="@+id/cell_65"
+                    android:layout_width="37sp"
+                    android:layout_height="37sp"
+                    android:scaleType="fitXY"
+                    />
 
-                <ImageButton
-                    android:id="@+id/imageButton64"
-                    android:layout_width="50sp"
-                    android:layout_height="50sp"
-                    android:background="@color/colorFive"
+                <ImageView
+                    android:id="@+id/cell_66"
+                    android:layout_width="37sp"
+                    android:layout_height="37sp"
+                    android:background="#00FF0000"
                     android:scaleType="fitXY"
-                    app:srcCompat="@drawable/panda" />
+                    />
+                <ImageView
+                    android:background="#00FF0000"
+                    android:id="@+id/cell_67"
+                    android:layout_width="37sp"
+                    android:layout_height="37sp"
+                    android:scaleType="fitXY"
+                    />
 
-                <ImageButton
-                    android:id="@+id/imageButton65"
-                    android:layout_width="50sp"
-                    android:layout_height="50sp"
-                    android:background="@color/colorFive"
+                <ImageView
+                    android:id="@+id/cell_68"
+                    android:layout_width="37sp"
+                    android:layout_height="37sp"
+                    android:background="#00FF0000"
                     android:scaleType="fitXY"
-                    app:srcCompat="@drawable/panda" />
-
-                <ImageButton
-                    android:id="@+id/imageButton66"
-                    android:layout_width="50sp"
-                    android:layout_height="50sp"
-                    android:background="@color/colorThree"
+                    />
+                <ImageView
+                    android:id="@+id/cell_69"
+                    android:layout_width="37sp"
+                    android:layout_height="37sp"
+                    android:background="#00FF0000"
                     android:scaleType="fitXY"
-                    app:srcCompat="@drawable/panda" />
-
-                <ImageButton
-                    android:id="@+id/imageButton67"
-                    android:layout_width="50sp"
-                    android:layout_height="50sp"
-                    android:background="@color/colorSix"
-                    android:scaleType="fitXY"
-                    app:srcCompat="@drawable/panda" />
+                    />
             </TableRow>
 
             <TableRow
                 android:layout_width="match_parent"
                 android:layout_height="match_parent">
 
-                <ImageButton
-                    android:id="@+id/imageButton71"
-                    android:layout_width="50sp"
-                    android:layout_height="50sp"
-                    android:background="@color/colorFive"
+                <ImageView
+                    android:background="#00FF0000"
+                    android:id="@+id/cell_71"
+                    android:layout_width="37sp"
+                    android:layout_height="37sp"
                     android:scaleType="fitXY"
-                    app:srcCompat="@drawable/panda" />
+                    />
 
-                <ImageButton
-                    android:id="@+id/imageButton72"
-                    android:layout_width="50sp"
-                    android:layout_height="50sp"
-                    android:background="@color/colorSix"
+                <ImageView
+                    android:id="@+id/cell_72"
+                    android:layout_width="37sp"
+                    android:layout_height="37sp"
+                    android:background="#00FF0000"
                     android:scaleType="fitXY"
-                    app:srcCompat="@drawable/panda" />
+                    />
+                <ImageView
+                    android:background="#00FF0000"
+                    android:id="@+id/cell_73"
+                    android:layout_width="37sp"
+                    android:layout_height="37sp"
+                    android:scaleType="fitXY"
+                    />
 
-                <ImageButton
-                    android:id="@+id/imageButton73"
-                    android:layout_width="50sp"
-                    android:layout_height="50sp"
-                    android:background="@color/colorThree"
+                <ImageView
+                    android:id="@+id/cell_74"
+                    android:layout_width="37sp"
+                    android:layout_height="37sp"
+                    android:background="#00FF0000"
                     android:scaleType="fitXY"
-                    app:srcCompat="@drawable/panda" />
+                    />
+                <ImageView
+                    android:background="#00FF0000"
+                    android:id="@+id/cell_75"
+                    android:layout_width="37sp"
+                    android:layout_height="37sp"
+                    android:scaleType="fitXY"
+                    />
 
-                <ImageButton
-                    android:id="@+id/imageButton74"
-                    android:layout_width="50sp"
-                    android:layout_height="50sp"
-                    android:background="@color/colorFive"
+                <ImageView
+                    android:id="@+id/cell_76"
+                    android:layout_width="37sp"
+                    android:layout_height="37sp"
+                    android:background="#00FF0000"
                     android:scaleType="fitXY"
-                    app:srcCompat="@drawable/panda" />
+                    />
+                <ImageView
+                    android:background="#00FF0000"
+                    android:id="@+id/cell_77"
+                    android:layout_width="37sp"
+                    android:layout_height="37sp"
+                    android:scaleType="fitXY"
+                    />
 
-                <ImageButton
-                    android:id="@+id/imageButton75"
-                    android:layout_width="50sp"
-                    android:layout_height="50sp"
-                    android:background="@color/colorTwo"
+                <ImageView
+                    android:id="@+id/cell_78"
+                    android:layout_width="37sp"
+                    android:layout_height="37sp"
+                    android:background="#00FF0000"
                     android:scaleType="fitXY"
-                    app:srcCompat="@drawable/panda" />
+                    />
+                <ImageView
+                    android:id="@+id/cell_79"
+                    android:layout_width="37sp"
+                    android:layout_height="37sp"
+                    android:background="#00FF0000"
+                    android:scaleType="fitXY"
+                    />
+            </TableRow>
 
-                <ImageButton
-                    android:id="@+id/imageButton76"
-                    android:layout_width="50sp"
-                    android:layout_height="50sp"
-                    android:background="@color/colorSix"
-                    android:scaleType="fitXY"
-                    app:srcCompat="@drawable/panda" />
+            <TableRow
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
 
-                <ImageButton
-                    android:id="@+id/imageButton77"
-                    android:layout_width="50sp"
-                    android:layout_height="50sp"
-                    android:background="@color/colorSix"
+                <ImageView
+                    android:background="#00FF0000"
+                    android:id="@+id/cell_81"
+                    android:layout_width="37sp"
+                    android:layout_height="37sp"
                     android:scaleType="fitXY"
-                    app:srcCompat="@drawable/panda" />
+                    />
+
+                <ImageView
+                    android:id="@+id/cell_82"
+                    android:layout_width="37sp"
+                    android:layout_height="37sp"
+                    android:background="#00FF0000"
+                    android:scaleType="fitXY"
+                    />
+                <ImageView
+                    android:background="#00FF0000"
+                    android:id="@+id/cell_83"
+                    android:layout_width="37sp"
+                    android:layout_height="37sp"
+                    android:scaleType="fitXY"
+                    />
+
+                <ImageView
+                    android:id="@+id/cell_84"
+                    android:layout_width="37sp"
+                    android:layout_height="37sp"
+                    android:background="#00FF0000"
+                    android:scaleType="fitXY"
+                    />
+                <ImageView
+                    android:background="#00FF0000"
+                    android:id="@+id/cell_85"
+                    android:layout_width="37sp"
+                    android:layout_height="37sp"
+                    android:scaleType="fitXY"
+                    />
+
+                <ImageView
+                    android:id="@+id/cell_86"
+                    android:layout_width="37sp"
+                    android:layout_height="37sp"
+                    android:background="#00FF0000"
+                    android:scaleType="fitXY"
+                    />
+                <ImageView
+                    android:background="#00FF0000"
+                    android:id="@+id/cell_87"
+                    android:layout_width="37sp"
+                    android:layout_height="37sp"
+                    android:scaleType="fitXY"
+                    />
+
+                <ImageView
+                    android:id="@+id/cell_88"
+                    android:layout_width="37sp"
+                    android:layout_height="37sp"
+                    android:background="#00FF0000"
+                    android:scaleType="fitXY"
+                    />
+                <ImageView
+                    android:id="@+id/cell_89"
+                    android:layout_width="37sp"
+                    android:layout_height="37sp"
+                    android:background="#00FF0000"
+                    android:scaleType="fitXY"
+                    />
+            </TableRow>
+
+            <TableRow
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <ImageView
+                    android:background="#00FF0000"
+                    android:id="@+id/cell_91"
+                    android:layout_width="37sp"
+                    android:layout_height="37sp"
+                    android:scaleType="fitXY"
+                    />
+
+                <ImageView
+                    android:id="@+id/cell_92"
+                    android:layout_width="37sp"
+                    android:layout_height="37sp"
+                    android:background="#00FF0000"
+                    android:scaleType="fitXY"
+                    />
+                <ImageView
+                    android:background="#00FF0000"
+                    android:id="@+id/cell_93"
+                    android:layout_width="37sp"
+                    android:layout_height="37sp"
+                    android:scaleType="fitXY"
+                    />
+
+                <ImageView
+                    android:id="@+id/cell_94"
+                    android:layout_width="37sp"
+                    android:layout_height="37sp"
+                    android:background="#00FF0000"
+                    android:scaleType="fitXY"
+                    />
+                <ImageView
+                    android:background="#00FF0000"
+                    android:id="@+id/cell_95"
+                    android:layout_width="37sp"
+                    android:layout_height="37sp"
+                    android:scaleType="fitXY"
+                    />
+
+                <ImageView
+                    android:id="@+id/cell_96"
+                    android:layout_width="37sp"
+                    android:layout_height="37sp"
+                    android:background="#00FF0000"
+                    android:scaleType="fitXY"
+                    />
+                <ImageView
+                    android:background="#00FF0000"
+                    android:id="@+id/cell_97"
+                    android:layout_width="37sp"
+                    android:layout_height="37sp"
+                    android:scaleType="fitXY"
+                    />
+
+                <ImageView
+                    android:id="@+id/cell_98"
+                    android:layout_width="37sp"
+                    android:layout_height="37sp"
+                    android:background="#00FF0000"
+                    android:scaleType="fitXY"
+                    />
+                <ImageView
+                    android:id="@+id/cell_99"
+                    android:layout_width="37sp"
+                    android:layout_height="37sp"
+                    android:background="#00FF0000"
+                    android:scaleType="fitXY"
+                    />
             </TableRow>
         </TableLayout>
     </LinearLayout>
