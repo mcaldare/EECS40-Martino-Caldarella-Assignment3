@@ -8,14 +8,11 @@ import android.widget.TextView;
 import android.view.MotionEvent;
 import java.util.Random;
 import android.widget.Toast;
-import java.util.ArrayList;
-
 
 
 public class MainActivity extends AppCompatActivity  {
 
     ImageView[][] cell = new ImageView[9][9];
-    ImageView temp;
     TextView display;
     TextView display2;
     Integer[][] cellCode = new Integer[9][9];
@@ -24,6 +21,7 @@ public class MainActivity extends AppCompatActivity  {
     public int level = 1;
     public int goal = 10;
     public int score = 0;
+
 
 
     @Override
@@ -44,10 +42,6 @@ public class MainActivity extends AppCompatActivity  {
         initialize();
         draw();
 
-        if(score >= goal){
-            level++;
-            goal+=100;
-        }
     }
 
 
@@ -55,7 +49,7 @@ public class MainActivity extends AppCompatActivity  {
     public boolean onTouchEvent(MotionEvent event) {
 
         int action = event.getActionMasked();
-        int temp = 0;
+        int temp;
 
         switch (action) {
             case MotionEvent.ACTION_DOWN:
@@ -73,10 +67,16 @@ public class MainActivity extends AppCompatActivity  {
                     cellCode[initialY][initialX + 1] = temp;
                     if(validMove()) {
                         delete();
+                        update();
+                        delete();
+                        update();
                         draw();
 
                     }
                     else{
+                        temp = cellCode[initialY][initialX];
+                        cellCode[initialY][initialX] = cellCode[initialY][initialX + 1];
+                        cellCode[initialY][initialX + 1] = temp;
                         Toast.makeText(getApplicationContext(),"Move not valid",Toast.LENGTH_SHORT).show();
                     }
                 }
@@ -86,10 +86,16 @@ public class MainActivity extends AppCompatActivity  {
                     cellCode[initialY][initialX - 1] = temp;
                     if(validMove()) {
                         delete();
+                        update();
+                        delete();
+                        update();
                         draw();
 
                     }
                     else{
+                        temp = cellCode[initialY][initialX];
+                        cellCode[initialY][initialX] = cellCode[initialY][initialX - 1];
+                        cellCode[initialY][initialX - 1] = temp;
                         Toast.makeText(getApplicationContext(),"Move not valid",Toast.LENGTH_SHORT).show();
                     }
                 }
@@ -99,10 +105,16 @@ public class MainActivity extends AppCompatActivity  {
                     cellCode[initialY + 1][initialX] = temp;
                     if(validMove()) {
                         delete();
+                        update();
+                        delete();
+                        update();
                         draw();
 
                     }
                     else{
+                        temp = cellCode[initialY][initialX];
+                        cellCode[initialY][initialX] = cellCode[initialY + 1][initialX];
+                        cellCode[initialY + 1][initialX] = temp;
                         Toast.makeText(getApplicationContext(),"Move not valid",Toast.LENGTH_SHORT).show();
                     }
                 }
@@ -112,13 +124,21 @@ public class MainActivity extends AppCompatActivity  {
                     cellCode[initialY - 1][initialX] = temp;
                     if(validMove()) {
                         delete();
+                        update();
+                        delete();
+                        update();
                         draw();
 
                     }
                     else{
+                        temp = cellCode[initialY][initialX];
+                        cellCode[initialY][initialX] = cellCode[initialY - 1][initialX];
+                        cellCode[initialY - 1][initialX] = temp;
                         Toast.makeText(getApplicationContext(),"Move not valid",Toast.LENGTH_SHORT).show();
                     }
                 }
+
+
 
                 else{
                     Toast.makeText(getApplicationContext(),"Move not valid",Toast.LENGTH_SHORT).show();
@@ -132,14 +152,13 @@ public class MainActivity extends AppCompatActivity  {
                 display.setText("Movement occurred outside bounds of current screen element");
                 break;
         }
-        update();
-        draw();
         return super.onTouchEvent(event);
     }
 
     public void initialize(){
 
         display.setText("Level " + level + "\t\t\t\tGoal: " + goal);
+
 
         for(int i = 0; i < 9; i++){
             for(int j = 0; j < 9; j++){
@@ -220,6 +239,8 @@ public class MainActivity extends AppCompatActivity  {
             }
 
 
+
+
             for (int n = 0; n < 9; n++) {
                 cellCode[m][n] = temp[n];
             }
@@ -234,12 +255,12 @@ public class MainActivity extends AppCompatActivity  {
                 int temp[] = new int[arr.length];
                 int count = 2;
                 for (int i = 1; i < arr.length - 1 ; i++) {
-                    if (arr[i] == arr[i + 1] && arr[i] == arr[i - 1]) {
+                    if (arr[i] == arr[i+1] && arr[i] == arr[i-1]){
                         count++;
                     }
                     if(arr[i] != arr[i+1] && count >=3){
                         for(int j = i - count + 1; j <= i ; j++){
-                            temp[j] =  arr[j] * -1;
+                            temp[j] =  Math.abs(arr[j]) * -1;
                         }
                         count = 2;
                     }
@@ -269,18 +290,22 @@ public class MainActivity extends AppCompatActivity  {
                     temp[arr.length-1] = arr[arr.length-1];
                 }
 
-                for (int i = 0; i < arr.length; i++) {
-                    if(temp[i] < 0){
-                        temp[i] = 0;
-                    }
-                }
-
 
                 for (int n = 0; n < 9; n++) {
                     cellCode[n][m] = temp[n];
                 }
 
         }
+
+        for(int i = 0; i < 9; i++){
+            for(int j = 0; j < 9; j++){
+                if(cellCode[i][j] < 0){
+                    cellCode[i][j] = 0;
+                }
+            }
+        }
+
+
 
 
 
@@ -313,8 +338,12 @@ public class MainActivity extends AppCompatActivity  {
                 }
             }
         }
+
+
+
         if(score < goal) {
             display2.setText("Score:\t\t" + score);
+
         }
         else{
             display2.setText("New Level!");
@@ -326,6 +355,7 @@ public class MainActivity extends AppCompatActivity  {
     }
 
     public void draw(){
+
         for(int i = 0; i < 9; i++){
             for(int j = 0; j < 9; j++){
                 if(cellCode[i][j] == 1){
@@ -429,17 +459,28 @@ public class MainActivity extends AppCompatActivity  {
     boolean validMove() {
         boolean moveOk = false;
         for (int i = 0; i < 7; i++) {
-            for (int j = 0; j < 7; j++) {
-                if ((cellCode[i][j] == cellCode[i + 1][j] && cellCode[i][j] == cellCode[i + 2][j]) ||
-                        (cellCode[i][j] == cellCode[i][j + 1] && cellCode[i][j] == cellCode[i][j + 2])) {
+            for (int j = 0; j < 9; j++) {
+                if (cellCode[i][j].equals(cellCode[i + 1][j]) && cellCode[i][j].equals(cellCode[i + 2][j])){
                    moveOk = true;
                    break;
                 }
             }
         }
+
+        for (int i = 0; i < 9; i++) {
+            for (int j = 0; j < 7; j++) {
+                if (cellCode[i][j].equals(cellCode[i][j+1]) && cellCode[i][j].equals(cellCode[i][j+2])){
+                    moveOk = true;
+                    break;
+                }
+            }
+        }
+
         if(moveOk) {return true;}
         else {return false;}
     }
+
+
 
 }
 
